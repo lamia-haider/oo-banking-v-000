@@ -20,9 +20,11 @@ class Transfer
 #       each transfer can only happen once (FAILED - 2)
 #       rejects a transfer if the sender doesn't have a valid account (FAILED - 3)
   def execute_transaction
-    sender.balance = sender.balance - amount
-    receiver.balance = receiver.balance + amount
-    @status = "complete"
+    if self.status = "open"
+      sender.balance = sender.balance - amount
+      receiver.balance = receiver.balance + amount
+      @status = "complete"
+    end
 
   end
 
