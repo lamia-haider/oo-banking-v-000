@@ -16,11 +16,16 @@ class Transfer
   end
 
   def execute_transaction
+<<<<<<< HEAD
     if @status != "complete" && self.valid? == true
+=======
+    if @status != "complete" && sender.valid? == true
+>>>>>>> a25c0dfe9a481fb1f1c4526af14201e3cbaeff86
       receiver.balance = receiver.balance + amount
       sender.balance = sender.balance - amount
       @status = "complete"
     end
+<<<<<<< HEAD
     if self.valid? == false
       @status = "rejected"
       return "Transaction rejected. Please check your account balance."
@@ -36,4 +41,9 @@ class Transfer
   end
 
 
+=======
+
+  end
+
+>>>>>>> a25c0dfe9a481fb1f1c4526af14201e3cbaeff86
 end
