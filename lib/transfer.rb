@@ -10,6 +10,7 @@ class Transfer
 
   def valid? #both have to be valid data-visibility
     if sender.valid? && receiver.valid?
+    end
   end
 
 
