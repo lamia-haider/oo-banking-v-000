@@ -12,5 +12,9 @@ class BankAccount
     self.balance = balance + amount
   end
 
+  def display_balance
+    puts self.balance
+  end
+
 
 end
