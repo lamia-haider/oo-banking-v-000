@@ -15,7 +15,14 @@ class Transfer
     end
   end
 
+
+#  can execute a successful transaction between two accounts (FAILED - 1)
+#       each transfer can only happen once (FAILED - 2)
+#       rejects a transfer if the sender doesn't have a valid account (FAILED - 3)
   def execute_transaction
+    sender.balance = sender.balance - amount
+    receiver.balance = receiver.balance + amount
+    
   end
 
 
