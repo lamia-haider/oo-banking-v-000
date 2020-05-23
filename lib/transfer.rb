@@ -8,7 +8,8 @@ class Transfer
     @status = "pending"
   end
 
-  def valid?
+  def valid? #both have to be valid data-visibility
+    if sender.valid? && receiver.valid?
   end
 
 
