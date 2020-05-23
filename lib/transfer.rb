@@ -32,6 +32,9 @@ class Transfer
   end
 
   def reverse_transfer
+    self.status = "pending"
+    receiver.balance - amount
+  end
   end
 
 
