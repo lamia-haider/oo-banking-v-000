@@ -13,7 +13,7 @@ class BankAccount
   end
 
   def display_balance
-    print self.balance
+    return "Your balance is $#{self.balance}."
   end
 
 
